@@ -6,8 +6,8 @@ public class Main {
         System.out.println(square.getLargeDiagonal());
         System.out.println(square.getHeight());
         System.out.println(square.getColor());
-        System.out.println(square.getPerimeter());
-        System.out.println(square.getArea());
+        System.out.println(square.perimeter());
+        System.out.println(square.area());
 
         System.out.println("--------------");
 
@@ -15,8 +15,8 @@ public class Main {
         System.out.println(rectangle.getLargeDiagonal());
         System.out.println(rectangle.getHeight());
         System.out.println(rectangle.getColor());
-        System.out.println(rectangle.getPerimeter());
-        System.out.println(rectangle.getArea());
+        System.out.println(rectangle.perimeter());
+        System.out.println(rectangle.area());
 
         System.out.println("--------------");
 
@@ -24,8 +24,8 @@ public class Main {
         System.out.println(rhombuses.getLargeDiagonal());
         System.out.println(rhombuses.getHeight());
         System.out.println(rhombuses.getColor());
-        System.out.println(rhombuses.getPerimeter());
-        System.out.println(rhombuses.getArea());
+        System.out.println(rhombuses.perimeter());
+        System.out.println(rhombuses.area());
 
         System.out.println("--------------");
 
@@ -33,7 +33,7 @@ public class Main {
         System.out.println(parallelogram.getLargeDiagonal());
         System.out.println(parallelogram.getHeight());
         System.out.println(parallelogram.getColor());
-        System.out.println(parallelogram.getPerimeter());
-        System.out.println(parallelogram.getArea());
+        System.out.println(parallelogram.perimeter());
+        System.out.println(parallelogram.area());
     }
 }

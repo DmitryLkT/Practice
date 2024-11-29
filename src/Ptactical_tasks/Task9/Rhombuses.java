@@ -23,16 +23,16 @@ public class Rhombuses extends Quadrangle implements Figure {
 
     @Override
     public double getHeight() {
-        return getArea() / a;
+        return area() / a;
     }
 
     @Override
-    public double getArea() {
+    public double area() {
         return Math.sqrt(a) * Math.sin(Math.toRadians(a));
     }
 
     @Override
-    public double getPerimeter() {
+    public double perimeter() {
         return a * 4;
     }
 }

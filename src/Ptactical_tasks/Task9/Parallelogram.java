@@ -27,12 +27,12 @@ public class Parallelogram extends Quadrangle implements Figure {
     }
 
     @Override
-    public double getArea() {
+    public double area() {
         return Math.max(a, b) * getHeight();
     }
 
     @Override
-    public double getPerimeter() {
+    public double perimeter() {
         return 2 * (a + b);
     }
 }

@@ -2,7 +2,7 @@ package Ptactical_tasks.Task9;
 
 public interface Figure {
 
-    double getArea();
+    double area();
 
-    double getPerimeter();
+    double perimeter();
 }

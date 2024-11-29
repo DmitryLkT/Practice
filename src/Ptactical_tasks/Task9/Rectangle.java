@@ -24,12 +24,12 @@ public class Rectangle extends Quadrangle implements Figure {
     }
 
     @Override
-    public double getArea() {
+    public double area() {
         return a * b;
     }
 
     @Override
-    public double getPerimeter() {
+    public double perimeter() {
         return (a + b) * 2;
     }
 }
