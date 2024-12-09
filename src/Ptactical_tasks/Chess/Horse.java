@@ -21,8 +21,17 @@ public class Horse extends ChessPiece {
             return false;
         }
 
+        if(!movementFigure(chessBoard, line, column, toLine, toColumn)) {
+            return false;
+        }
+
         int hLine = Math.abs(line - toLine);
         int hColumn = Math.abs(column - toColumn);
+
+        if((column - toColumn == 1 || column - toColumn == -1) && (line - toLine == 1 || line - toLine == -1)
+                && chessBoard.board[toLine][toColumn] != null) {
+            return !chessBoard.board[toLine][toColumn].getColor().equals(color);
+        }
 
         return (hLine == 2 && hColumn == 1 || hLine == 1 && hColumn == 2);
     }

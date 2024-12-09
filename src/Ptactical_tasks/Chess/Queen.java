@@ -1,7 +1,7 @@
 package Ptactical_tasks.Chess;
 
-public class Bishop extends ChessPiece {
-    public Bishop(String color) {
+public class Queen extends ChessPiece {
+    public Queen(String color) {
         super(color);
     }
 
@@ -12,8 +12,8 @@ public class Bishop extends ChessPiece {
 
     @Override
     public boolean canMoveToPosition(ChessBoard chessBoard, int line, int column, int toLine, int toColumn) {
-        if(!chessBoard.checkPos(line) || !chessBoard.checkPos(toLine)
-                || !chessBoard.checkPos(column) || !chessBoard.checkPos(toColumn)) {
+        if (!chessBoard.checkPos(line) || !chessBoard.checkPos(column)
+                || !chessBoard.checkPos(toLine) || !chessBoard.checkPos(toColumn)) {
             return false;
         }
 
@@ -25,21 +25,19 @@ public class Bishop extends ChessPiece {
             return false;
         }
 
-        int dLine = Math.abs(line - toLine);
-        int dColumn = Math.abs(column - toColumn);
+        int qLine = Math.abs(line - toLine);
+        int qColumn = Math.abs(column - toColumn);
 
         if((column - toColumn == 1 || column - toColumn == -1) && (line - toLine == 1 || line - toLine == -1)
                 && chessBoard.board[toLine][toColumn] != null) {
             return !chessBoard.board[toLine][toColumn].getColor().equals(color);
         }
 
-        return dLine == dColumn;
+        return qLine == qColumn || qLine == 0 || qColumn == 0;
     }
 
     @Override
     public String getSymbol() {
-        return "B";
+        return "Q";
     }
-
-
 }

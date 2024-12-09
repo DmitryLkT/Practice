@@ -17,12 +17,21 @@ public class Pawn extends ChessPiece {
             return false;
         }
 
+        if(!movementFigure(chessBoard, line, column, toLine, toColumn)) {
+            return false;
+        }
+
         if(line == toLine && column == toColumn) {
             return false;
         }
 
         int directionOfMovement = color.equals("White") ? 1 : -1;
         int startLine = color.equals("White") ? 1 : 6;
+
+        if((column - toColumn == 1 || column - toColumn == -1) && (line - toLine == 1 || line - toLine == -1)
+                && chessBoard.board[toLine][toColumn] != null) {
+            return !chessBoard.board[toLine][toColumn].getColor().equals(color);
+        }
 
         if(column == toColumn) {
             if(line == startLine && toLine - line == 2 * directionOfMovement) {
